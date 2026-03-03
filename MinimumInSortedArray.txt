@@ -1,0 +1,24 @@
+solution in find minimum in sorted array
+
+first approach is to scan entire array
+not optimal but works
+
+second approach
+binary search
+
+int findmin(vector<int> & nums){
+    int left =0;
+    int right = nums.size()-1;
+
+    if(left <right){
+        int mid=left +(right-left)/2;
+
+        // check if mid is greater than the right half,if yes then min is in right
+        if(nums[mid] > nums[right]){
+            left = mid+1;
+        }else{
+            mid=right;
+        } 
+    }
+    return numd[left];
+}
